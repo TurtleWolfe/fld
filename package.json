@@ -10,19 +10,22 @@
   },
   "dependencies": {
     "@tensorflow-models/face-landmarks-detection": "0.0.3",
+    "@tensorflow/tfjs-backend-cpu": "^3.1.0",
     "@tensorflow/tfjs-backend-wasm": "^3.1.0",
     "@tensorflow/tfjs-backend-webgl": "^3.1.0",
-    "@tensorflow/tfjs-backend-cpu": "^3.1.0",
     "@tensorflow/tfjs-converter": "^3.1.0",
     "@tensorflow/tfjs-core": "^3.1.0",
+    "gh-pages": "^3.1.0",
     "stats.js": "^0.17.0"
   },
   "scripts": {
     "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --target browser --open",
     "build": "cross-env NODE_ENV=production parcel build index.html --target browser --public-url ./",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "link-local": "yalc link @tensorflow-models/face-landmarks-detection"
   },
+  "homepage": "https://TurtleWolfe.github.io/fld",
   "browser": {
     "crypto": false
   },
